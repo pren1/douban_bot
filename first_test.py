@@ -35,7 +35,7 @@ def my_job(rv_comment):
             urllib.request.install_opener(opener)
             urllib.request.urlretrieve(test_case, filename)
             im = open(filename, 'rb').read()
-            correct_code = cjy_fetch_code(im, 1902)
+            correct_code = cjy_fetch_code(im, 3008)
             print(f"验证码：{correct_code}")
             params['captcha-id'] = captcha_id
             params['captcha-solution'] = correct_code
